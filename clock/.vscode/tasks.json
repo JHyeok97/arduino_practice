@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "아두이노 빌드",
+			"command": "arduino-cli --fqbn arduino:avr:uno compile clock\\clock.ino --build-path build",
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": ""
+		},
+		{
+			"type": "shell",
+			"label": "아두이노 업로드",
+			"command": "arduino-cli upload -p COM3 -v --fqbn arduino:avr:uno ${fileName}",
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "test",
+			"detail": ""
+		}
+	]
+}
